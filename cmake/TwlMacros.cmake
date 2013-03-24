@@ -1,0 +1,7 @@
+MACRO(LIST_LENGTH var)
+  SET(entries)
+  FOREACH(e ${ARGN})
+    SET(entries "${entries}.")
+  ENDFOREACH(e)
+  STRING(LENGTH ${entries} ${var})
+ENDMACRO(LIST_LENGTH)
